@@ -1,0 +1,13 @@
+type Document {
+    id: ID
+    name: String
+    className: String
+    createdBy: String
+    creationDate: String
+    mimeType: String
+}
+
+type Query {
+    getDocumentById(id: ID!): Document
+    searchDocuments(folderPath: String!): [Document]
+}
